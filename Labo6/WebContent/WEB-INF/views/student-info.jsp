@@ -107,6 +107,7 @@
 					<div class="col-md-12">												
 						   <div class="form-group">
 							 	<label for="articleNameInput">Nombre</label>
+							 	<label style="float: right;">${estudiante.getName()}</label>
 							 	<form:input type="text" class="form-control"  path="name" name="articleNameInput"/>							 	
 							 	<form:errors path="name" cssStyle="color: #E81505"/>
 							 	<form:hidden path="id"/>					 						 	
@@ -115,12 +116,15 @@
 						 
 						 <div class="form-group">
 						 	<label for="articleNameInput">Apellido</label>
+						 	<label style="float: right;">${estudiante.getSurname()}</label>
 						 	<form:input type="text" class="form-control"  path="surname" name="articleNameInput" />
 						 	<form:errors path="surname" cssStyle="color: #E81505"/>					 						 	
 						 </div>
 						 											
 						   <div class="form-group">
-							 	<label for="articleNameInput">Estado</label>
+							 	<label>Estado</label>
+							 	<label style="float: right;">${estudiante.getActiveStatus()}</label>
+							 	<br/>
 							 	<form:radiobutton path="active" value="true"/> Activo
 							 	<form:radiobutton path="active" value="false"/> Inactivo
 							 								 						 						 
@@ -129,6 +133,7 @@
 						 
 						 <div class="form-group">
 						 	<label for="articleNameInput">Edad</label>
+						 	<label style="float: right;">${estudiante.getAge()}</label>
 						 	<form:input type="text" class="form-control"  path="age" name="articleNameInput" />
 						 	<form:errors path="age" cssStyle="color: #E81505"/>					 						 	
 						 </div>
