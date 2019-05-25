@@ -89,7 +89,7 @@
 			</div>
 			<div class="col-md-6 library-name-section">
 				<span style="font-size: 20px;">										
-					¿Desea eliminar al estudiante?
+					Creación de estudiante
 				</span>	
 			</div>
 		</div>
@@ -102,12 +102,12 @@
 		
 		<div class="col-md-8 form-container" style="padding-top:150px;">
 			<div class="fill-full-width border-radius-padding">
-				<form:form action="${pageContext.request.contextPath}/delete-student" method="POST" modelAttribute="estudiante">
+				<form:form action="${pageContext.request.contextPath}/create" method="POST" modelAttribute="estudiante">
 				  <div class="row">
 					<div class="col-md-12">												
 						   <div class="form-group">
 							 	<label for="articleNameInput">Nombre</label>
-							 	<form:input type="text" class="form-control"  path="name" disabled="true" name="articleNameInput"/>							 	
+							 	<form:input type="text" class="form-control"  path="name" name="articleNameInput"/>							 	
 							 	<form:errors path="name" cssStyle="color: #E81505"/>
 							 	<form:hidden path="id"/>					 						 	
 						 	</div>
@@ -115,21 +115,21 @@
 						 
 						 <div class="form-group">
 						 	<label for="articleNameInput">Apellido</label>
-						 	<form:input type="text" class="form-control"  path="surname" disabled="true" name="articleNameInput" />
+						 	<form:input type="text" class="form-control"  path="surname" name="articleNameInput" />
 						 	<form:errors path="surname" cssStyle="color: #E81505"/>					 						 	
 						 </div>
 						 											
 						   <div class="form-group">
 							 	<label for="articleNameInput">Estado</label>
-							 	<form:radiobutton path="active" disabled="true" value="true"/> Activo
-							 	<form:radiobutton path="active" disabled="true" value="false"/> Inactivo
+							 	<form:radiobutton path="active" value="true"/> Activo
+							 	<form:radiobutton path="active" value="false"/> Inactivo
 							 								 						 						 
 						 	</div>
 						   					   
 						 
 						 <div class="form-group">
 						 	<label for="articleNameInput">Edad</label>
-						 	<form:input type="text" class="form-control"  path="age" disabled="true" name="articleNameInput" />
+						 	<form:input type="text" class="form-control"  path="age" name="articleNameInput" />
 						 	<form:errors path="age" cssStyle="color: #E81505"/>					 						 	
 						 </div>
 					 </div>
@@ -141,7 +141,7 @@
 					 						 		
 					 	</div>
 					 	<div class="col-md-2 form-container">
-					 		<button type="submit" class="btn btn-success"><i class="fas fa-user-minus"></i>Eliminar</button>			 						 							 						 						 
+					 		<button type="submit" class="btn btn-success"><i class="fas fa-edit"></i>Crear</button>			 						 							 						 						 
 					 		
 					 	</div>
 					 	<div class="col-md-5 form-container">					 		

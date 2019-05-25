@@ -89,7 +89,7 @@
 			</div>
 			<div class="col-md-6 library-name-section">
 				<span style="font-size: 20px;">										
-				
+					Edición de estudiante
 				</span>	
 			</div>
 		</div>

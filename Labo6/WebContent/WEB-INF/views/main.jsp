@@ -98,6 +98,10 @@
 			table-layout: fixed;
 		}
 		
+		.button-fixed {
+			position: fixed;
+			margin-top: 150px;
+		}
 		
 				
 	</style>
@@ -146,7 +150,7 @@
 		</div>
 		
 		<div class="col-md-2">
-			
+			<button class="btn btn-success button-fixed" onclick="location.href='${pageContext.request.contextPath}/create-student'">Nuevo</button>
 		</div>
 	</div>
 	

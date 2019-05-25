@@ -78,6 +78,29 @@ public class MainController {
 		return mav;
 	}	
 	
+	@RequestMapping("/create-student")
+	public ModelAndView createStudent() {		
+		ModelAndView mav = new ModelAndView();	
+		
+		Student estudiante = new Student();
+		
+		mav.addObject("estudiante", estudiante);
+		mav.setViewName("student-create");
+		return mav;
+	}	
+	
+	@RequestMapping("/create")
+	public ModelAndView create(@ModelAttribute Student student) {		
+		ModelAndView mav = new ModelAndView();	
+				
+		studentService.save(student);
+		
+		List<Student> estudiantes = studentService.findAll();
+		mav.addObject("estudiantes", estudiantes);
+		mav.setViewName("main");
+		return mav;
+	}	
+	
 	
 	
 	
